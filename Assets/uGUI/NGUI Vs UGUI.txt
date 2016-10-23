@@ -1,0 +1,36 @@
+What's different:
+
+
+-Canvas can be placed in world space or screen space
+
+-Button's OnClick can now accept parameters. (1 parameter only?). And can also access functions in components attached to gameObject.
+
+-Can use unity's built-in animation tools to animate button transitions.
+
+-Navigating buttons using keyboard is automatic.
+
+-ugui images can use materials
+
+-ugui has component for masking images
+-UI is layered through hierarchy. Canvas has layer ordering property.
+
+-UGUI doesn't have colliders. UI can be interactable through script(?)
+
+-Simplified anchoring. No advanced options for anchoring(?). UI is relative to parent.
+
+-UI pivot can be moved
+-NGUI uses atlas maker. UGUI uses sprite packer.
+
+
+
+What's not in UGUI:
+
+-No component for making draggable objects
+
+-No localization
+
+-No component for camera scrollview
+
+-no UIWrap for looping scrollview contents
+
+-No cLasses for playing audio and tweens.
