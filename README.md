@@ -18,7 +18,7 @@
 
 Unity 教程：https://unity3d.com/cn/learn/tutorials/topics/user-interface-ui
 
-Unity手册：https://docs.unity3d.com/Manual/UISystem.html
+Unity手册：https://docs.unity3d.com/Manual/UICanvas.html
 
 Unity脚本手册：https://docs.unity3d.com/ScriptReference/UI.Button.html
 
