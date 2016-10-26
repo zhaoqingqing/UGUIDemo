@@ -12,7 +12,7 @@
 
 ### HSVPicker(拾色器)
 
-![Doc\ColorPicker.gif](Doc\ColorPicker.gif)
+![https://github.com/zhaoqingqing/UGUIDemo/blob/master/Doc/ColorPicker.gif](https://github.com/zhaoqingqing/UGUIDemo/blob/master/Doc/ColorPicker.gif)
 
 ## 更多资料
 
