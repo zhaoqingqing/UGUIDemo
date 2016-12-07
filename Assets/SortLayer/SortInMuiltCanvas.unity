@@ -461,7 +461,7 @@ GameObject:
   - 223: {fileID: 1078906087}
   - 114: {fileID: 1078906085}
   m_Layer: 5
-  m_Name: Canvas3
+  m_Name: CanvasBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -496,11 +496,11 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1078906088
 RectTransform:
@@ -518,8 +518,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 439, y: 274.5}
-  m_SizeDelta: {x: 878, y: 549}
+  m_AnchoredPosition: {x: 438.4, y: 242.5}
+  m_SizeDelta: {x: 776, y: 485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1116986766
 GameObject:
@@ -532,7 +532,7 @@ GameObject:
   - 223: {fileID: 1116986769}
   - 114: {fileID: 1116986767}
   m_Layer: 5
-  m_Name: Canvas1
+  m_Name: CanvasWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,11 +567,11 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1116986770
 RectTransform:
@@ -622,6 +622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b7081b04b6863458e6a76b92ca1e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BtnSort: {fileID: 2012895838}
+  CanvasWhite: {fileID: 1116986769}
+  CanvasRed: {fileID: 1558436694}
+  CanvasBlue: {fileID: 1078906087}
 --- !u!114 &1135021786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +778,7 @@ GameObject:
   - 223: {fileID: 1558436694}
   - 114: {fileID: 1558436692}
   m_Layer: 5
-  m_Name: Canvas2
+  m_Name: CanvasRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -809,11 +813,11 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1558436695
 RectTransform:
