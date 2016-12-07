@@ -246,19 +246,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff8799f27c2b064499f6e30ee114d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriangleList:
-  - {x: 0, y: 0, z: 0}
-  - {x: 1, y: 0, z: -1}
-  - {x: -1, y: 0, z: -1}
-  - {x: 2, y: 0, z: -2}
-  - {x: -2, y: 0, z: -2}
-  Count: 7
+  Count: 10
   TriangleX: 1
   TriangleZ: 1
   StartPos: {x: 0, y: 0, z: 0}
-  Angle: 10
-  DistanceX: 1
-  circleRadius: 3
+  factor: 10
+  distance: 5
+  circleRadius: 2.4
   circleCenterPos: {x: 0, y: 0, z: 0}
   "\u5F27\u957F": 2
   "\u89D2\u5EA6": 20

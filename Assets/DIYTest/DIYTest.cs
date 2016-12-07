@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Text;
 
 /// <summary>
+/// 三角形、圆弧形的排列算法
 /// 数学知识：Mathf.Pow(2, 4)：2的4次方
 /// </summary>
 public class DIYTest : MonoBehaviour
 {
-    public List<Vector3> TriangleList = new List<Vector3>() { new Vector3(0, 0, 0), new Vector3(1, 0, -1), new Vector3(-1, 0, -1), new Vector3(2, 0, -2), new Vector3(-2, 0, -2) };
     public int Count = 5;
     private List<GameObject> NPCList = new List<GameObject>();
     int[] evenArry = new int[] { 0, 1, 2, 4, 6 };
@@ -39,31 +39,46 @@ public class DIYTest : MonoBehaviour
         {
             Create();
         }
-        GUILayout.Space(btnSpace);
 
-        if (GUILayout.Button("三角形"))
-        {
-            Triangle();
-        }
-        if (GUILayout.Button("三角形-2"))
-        {
-            SortTriangle();
-        }
         GUILayout.Space(btnSpace);
+        if (GUILayout.Button("三角形[右移]"))
+        {
+            StartPos = new Vector3(5, 0, 0);
+            SortTriangle(false);
+        }
+        if (GUILayout.Button("三角形[左移]"))
+        {
+            StartPos = new Vector3(-5, 0, 0);
+            SortTriangle(false);
+        }
+        if (GUILayout.Button("三角形[开口朝上]"))
+        {
+            StartPos = new Vector3(0, 0, 0);
+            SortTriangle(false);
+        }
+        if (GUILayout.Button("三角形[开口朝下]"))
+        {
+            SortTriangle(true);
+        }
 
-        if (GUILayout.Button("圆形"))
-        {
-            Circle();
-        }
-        if (GUILayout.Button("圆形-2"))
-        {
-            SortCircle();
-        }
         GUILayout.Space(btnSpace);
-
-        if (GUILayout.Button("圆弧形"))
+        if (GUILayout.Button("圆形-半径固定[朝上]"))
         {
-            SortArc();
+          SortCircle(false);
+        }
+        if (GUILayout.Button("圆形-半径固定[朝下]"))
+        {
+            SortCircle(true);
+        }
+
+        GUILayout.Space(btnSpace);
+        if (GUILayout.Button("圆形-半径改变[朝上]"))
+        {
+            Circle(false);
+        }
+        if (GUILayout.Button("圆弧形-半径改变[朝下]"))
+        {
+            Circle(true);
         }
     }
 
@@ -87,25 +102,9 @@ public class DIYTest : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 三角排列
-    /// </summary>
-    public void Triangle()
-    {
-        Create();
-        for (int i = 0; i < Count; i++)
-        {
-            int j = i / 5;
-            int k = i % 5;
-
-            NPCList[i].transform.localPosition = new Vector3(5 * j, 0, 0) + TriangleList[k];
-            NPCList[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-    }
-
     public float TriangleX = 1;
     public float TriangleZ = 1;
-    public Vector3 StartPos = Vector3.zero;
+    public Vector3 StartPos = new Vector3(5, 0, 5);
 
     /// <summary>
     /// 等腰三角形
@@ -113,11 +112,12 @@ public class DIYTest : MonoBehaviour
     /// 假设以(0,0)为初始点,横纵间距都为1,排列如下：(-3,3),(-2,2),(-1,1),(0,0),(1,1),(2,2),(3,3)
     /// 开口向上
     /// </summary>
-    public void SortTriangle()
+    public void SortTriangle(bool topTobottom)
     {
         Create();
         int evenCount = 1;
         int oddCount = 1;
+        int dir = topTobottom ? 1 : -1;
         //从1开始,先右再左
         for (int idx = 1; idx <= Count; idx++)
         {
@@ -127,17 +127,17 @@ public class DIYTest : MonoBehaviour
             if (idx > 1)
             {
                 var isEven = idx % 2;
-                //奇数和偶数的Z改变，开口方向就会改变
+                //奇数和偶数的Z改变，开口方向就会改变[默认开口向下]
                 if (isEven == 0) //偶数
                 {
-                    posX = evenCount * TriangleX;
-                    posZ = -evenCount * TriangleZ;
+                    posX = StartPos.x + evenCount * TriangleX;
+                    posZ = StartPos.z - dir * evenCount * TriangleZ;
                     evenCount++;
                 }
                 else  //奇数
                 {
-                    posX = -oddCount * TriangleX;
-                    posZ = -oddCount * TriangleZ;
+                    posX = StartPos.x - oddCount * TriangleX;
+                    posZ = StartPos.z - dir * oddCount * TriangleZ;
                     oddCount++;
                 }
                 NPCList[relIdx].transform.localPosition = new Vector3(posX, 0, posZ);
@@ -151,8 +151,14 @@ public class DIYTest : MonoBehaviour
         }
     }
 
-    public float Angle = 30;//弧度？角度?
-    public float DistanceX = 3;//半径?控制x之间的间距，系数
+    /// <summary>
+    /// 调这个值可以让排列变的更圆
+    /// </summary>
+    public float factor = 10;
+    /// <summary>
+    /// 调这个值可以让水平间距拉大
+    /// </summary>
+    public float distance = 5;
 
     /// <summary>
     /// 圆弧排列
@@ -160,24 +166,26 @@ public class DIYTest : MonoBehaviour
     /// 圆心和半径是变化的
     /// 开口向下
     /// </summary>
-    public void Circle()
+    /// <param name="topTobottom">true:开口向下 false:开口向上</param>
+    public void Circle(bool topTobottom)
     {
         Create();
-        float radius = DistanceX * (Count / Angle + 1);
+        float radius = distance * (Count / factor + 1);
+        int dir = topTobottom ? -1 : 1;
         for (int idx = 0; idx < Count; idx++)
         {
-            float angle = Mathf.Pow(-1, idx) * (Angle / (Count / Angle + 1)) / 180 * Mathf.PI * ((idx + 1) / 2);
-
+            float angle = Mathf.Pow(-1, idx) * (factor / (Count / factor + 1)) / 180 * Mathf.PI * ((idx + 1) / 2);
+            //已知半径,角度,求任意点的坐标
             float posX = radius * Mathf.Sin(angle);
-            float posZ = -radius * (1 - Mathf.Cos(angle));//开口朝向
-            Debug.LogFormat("angle:{0} ,sin:{1} ,cos:{2},x:{3} ,z:{4} \r{5}", angle, Mathf.Sin(angle), Mathf.Cos(angle), posX, posZ,radius);
+            float posZ = dir * radius * (1 - Mathf.Cos(angle));//1 - Mathf.Cos() 放在屏幕中间
+            Debug.LogFormat("angle:{0} ,sin:{1} ,cos:{2},x:{3} ,z:{4} \t radius:{5}", angle, Mathf.Sin(angle), Mathf.Cos(angle), posX, posZ, radius);
 
             NPCList[idx].transform.localPosition = new Vector3(posX, 0, posZ);
             NPCList[idx].transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
-    public float circleRadius = 3;//半径
+    public float circleRadius = 2.4f;//半径
     public Vector3 circleCenterPos = Vector3.zero;//圆心坐标
 
     /// <summary>
@@ -185,7 +193,7 @@ public class DIYTest : MonoBehaviour
     /// 已知中心点坐标,半径,将多个坐标排列成圆
     /// 开口向下
     /// </summary>
-    public void SortCircle()
+    public void SortCircle(bool topTobottom)
     {
         Create();
 
@@ -202,6 +210,7 @@ public class DIYTest : MonoBehaviour
             angles.Add(angleP * (float)idx);
         }
         Debug.LogFormat("circleCenterPos:{0},{1}", circleCenterPos.x, circleCenterPos.z);//0,-3
+        var dir = topTobottom ? 1 : -1;
         /**
         http://www.zybang.com/question/744080e079e4533e514b258daba45df7.html
         弧度*~=180*角度,所以角度=(弧度*3.14)/180
@@ -210,16 +219,21 @@ public class DIYTest : MonoBehaviour
         for (int idx = 0; idx < Count; idx++)
         {
             //根据圆的公式求任意点的坐标
-            float posX = circleCenterPos.x + circleRadius * Mathf.Cos(angles[idx] * Mathf.PI / 180.0f);
+            float posX = circleCenterPos.x + dir*circleRadius * Mathf.Cos(angles[idx] * Mathf.PI / 180.0f);
             //z +- 可改变开口方向
-            float posZ = circleCenterPos.z - circleRadius * Mathf.Sin(angles[idx] * Mathf.PI / 180.0f);
+            float posZ = circleCenterPos.z - dir*circleRadius * Mathf.Sin(angles[idx] * Mathf.PI / 180.0f);
             Debug.LogFormat("{0} =>{1}  {2},{3}", idx, angles[idx], posX, posZ);
             NPCList[idx].transform.localPosition = new Vector3(posX, 0, posZ);
             NPCList[idx].transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
+
+        //TODO 弧长 = (角度数 * PI * r) / 180
+        var arcLength = (angleP * Mathf.PI * circleRadius) / 180.0f;
+        Debug.LogFormat("最佳弧长为：{0}", arcLength);
+        //根据手机上的测试，美观的排列法：在半径为2.4,总数10人，相邻之间弧长为2.15
     }
 
-    public float 弧长 = 2.0f;
+    public float 弧长 = 2.15f;
     public float 角度 = 20.0f;
     /// <summary>
     /// 圆弧排列
@@ -237,7 +251,7 @@ public class DIYTest : MonoBehaviour
         */
         for (int idx = 0; idx < Count; idx++)
         {
-       
+
             //根据圆的公式求任意点的坐标
             float posX = circleCenterPos.x + radius * Mathf.Cos(角度 * Mathf.PI / 180.0f) * idx;
             float posZ = circleCenterPos.z + radius * Mathf.Sin(角度 * Mathf.PI / 180.0f) * idx;
