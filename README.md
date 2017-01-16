@@ -12,6 +12,8 @@
 
 ### HSVPicker(拾色器)
 
+源地址：https://github.com/judah4/HSV-Color-Picker-Unity
+
 ![https://github.com/zhaoqingqing/UGUIDemo/blob/master/Doc/ColorPicker.gif](https://github.com/zhaoqingqing/UGUIDemo/blob/master/Doc/ColorPicker.gif)
 
 ## 更多资料
@@ -30,3 +32,12 @@ Unity脚本手册：https://docs.unity3d.com/ScriptReference/UI.Button.html
 
 布局系统
 
+
+
+
+
+## 其它
+
+https://github.com/luzexi/Unity3DuGUI-Toolkit
+
+这个作者重写了和NGUI类似的Tween组件，给UGUI使用，UI_TweenColor，UI_TweenGroup，UI_TweenPosition，UI_TweenRotation，UI_TweenScale。
