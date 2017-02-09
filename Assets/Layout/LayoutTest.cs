@@ -79,7 +79,8 @@ public class LayoutTest : MonoBehaviour
             //不要强制修改child的Height
             VLayoutGroup.childForceExpandHeight = false;
         }
-
+        
+        //LayoutRebuilder.MarkLayoutForRebuild();
     }
 
     public void OnEnable()
