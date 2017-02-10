@@ -1,0 +1,405 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467eef783bb21d44eba6a57bc92b3b18, type: 3}
+  m_Name: kufu
+  m_EditorClassIdentifier: 
+  texSource: {fileID: 2800000, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  listSpriteAssetInfor:
+  - ID: 1
+    name: kufu_0
+    pivot: {x: 51, y: 57}
+    rect:
+      serializedVersion: 2
+      x: 2
+      y: 878
+      width: 102
+      height: 114
+    sprite: {fileID: 21300000, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 2
+    name: kufu_1
+    pivot: {x: 44, y: 51}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 890
+      width: 88
+      height: 102
+    sprite: {fileID: 21300002, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 3
+    name: kufu_2
+    pivot: {x: 41.5, y: 47.5}
+    rect:
+      serializedVersion: 2
+      x: 193
+      y: 896
+      width: 83
+      height: 95
+    sprite: {fileID: 21300004, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 4
+    name: kufu_3
+    pivot: {x: 47, y: 40.5}
+    rect:
+      serializedVersion: 2
+      x: 278
+      y: 910
+      width: 94
+      height: 81
+    sprite: {fileID: 21300006, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 5
+    name: kufu_4
+    pivot: {x: 47, y: 45}
+    rect:
+      serializedVersion: 2
+      x: 372
+      y: 902
+      width: 94
+      height: 90
+    sprite: {fileID: 21300008, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 6
+    name: kufu_5
+    pivot: {x: 93.5, y: 57.5}
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 762
+      width: 187
+      height: 115
+    sprite: {fileID: 21300010, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 7
+    name: kufu_6
+    pivot: {x: 46, y: 60.5}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 756
+      width: 92
+      height: 121
+    sprite: {fileID: 21300012, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 8
+    name: kufu_7
+    pivot: {x: 43, y: 58.5}
+    rect:
+      serializedVersion: 2
+      x: 280
+      y: 760
+      width: 86
+      height: 117
+    sprite: {fileID: 21300014, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 9
+    name: kufu_8
+    pivot: {x: 39, y: 58}
+    rect:
+      serializedVersion: 2
+      x: 366
+      y: 762
+      width: 78
+      height: 116
+    sprite: {fileID: 21300016, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 10
+    name: kufu_9
+    pivot: {x: 38.5, y: 60}
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 634
+      width: 77
+      height: 120
+    sprite: {fileID: 21300018, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 11
+    name: kufu_10
+    pivot: {x: 51, y: 62}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 632
+      width: 102
+      height: 124
+    sprite: {fileID: 21300020, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 12
+    name: kufu_11
+    pivot: {x: 49.5, y: 60.5}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 634
+      width: 99
+      height: 121
+    sprite: {fileID: 21300022, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 13
+    name: kufu_12
+    pivot: {x: 49.5, y: 61}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 634
+      width: 99
+      height: 122
+    sprite: {fileID: 21300024, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 14
+    name: kufu_13
+    pivot: {x: 49.5, y: 62}
+    rect:
+      serializedVersion: 2
+      x: 381
+      y: 632
+      width: 99
+      height: 124
+    sprite: {fileID: 21300026, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 15
+    name: kufu_14
+    pivot: {x: 51.5, y: 63}
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 506
+      width: 103
+      height: 126
+    sprite: {fileID: 21300028, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 16
+    name: kufu_15
+    pivot: {x: 51, y: 65}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 502
+      width: 102
+      height: 130
+    sprite: {fileID: 21300030, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 17
+    name: kufu_16
+    pivot: {x: 49, y: 64.5}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 503
+      width: 98
+      height: 129
+    sprite: {fileID: 21300032, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 18
+    name: kufu_17
+    pivot: {x: 49, y: 61}
+    rect:
+      serializedVersion: 2
+      x: 304
+      y: 509
+      width: 98
+      height: 122
+    sprite: {fileID: 21300034, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 19
+    name: kufu_18
+    pivot: {x: 41.5, y: 60.5}
+    rect:
+      serializedVersion: 2
+      x: 403
+      y: 510
+      width: 83
+      height: 121
+    sprite: {fileID: 21300036, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 20
+    name: kufu_19
+    pivot: {x: 50.5, y: 58.5}
+    rect:
+      serializedVersion: 2
+      x: 2
+      y: 384
+      width: 101
+      height: 117
+    sprite: {fileID: 21300038, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 21
+    name: kufu_20
+    pivot: {x: 44, y: 57}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 388
+      width: 88
+      height: 114
+    sprite: {fileID: 21300040, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 22
+    name: kufu_21
+    pivot: {x: 41.5, y: 58}
+    rect:
+      serializedVersion: 2
+      x: 193
+      y: 386
+      width: 83
+      height: 116
+    sprite: {fileID: 21300042, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 23
+    name: kufu_22
+    pivot: {x: 47.5, y: 61.5}
+    rect:
+      serializedVersion: 2
+      x: 277
+      y: 378
+      width: 95
+      height: 123
+    sprite: {fileID: 21300044, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 24
+    name: kufu_23
+    pivot: {x: 47, y: 64.5}
+    rect:
+      serializedVersion: 2
+      x: 372
+      y: 372
+      width: 94
+      height: 129
+    sprite: {fileID: 21300046, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 25
+    name: kufu_24
+    pivot: {x: 46.5, y: 62}
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 246
+      width: 93
+      height: 124
+    sprite: {fileID: 21300048, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 26
+    name: kufu_25
+    pivot: {x: 47, y: 58.5}
+    rect:
+      serializedVersion: 2
+      x: 94
+      y: 254
+      width: 94
+      height: 117
+    sprite: {fileID: 21300050, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 27
+    name: kufu_26
+    pivot: {x: 46, y: 55}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 262
+      width: 92
+      height: 110
+    sprite: {fileID: 21300052, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 28
+    name: kufu_27
+    pivot: {x: 43, y: 55}
+    rect:
+      serializedVersion: 2
+      x: 280
+      y: 262
+      width: 86
+      height: 110
+    sprite: {fileID: 21300054, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 29
+    name: kufu_28
+    pivot: {x: 38.5, y: 57.5}
+    rect:
+      serializedVersion: 2
+      x: 366
+      y: 256
+      width: 77
+      height: 115
+    sprite: {fileID: 21300056, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 30
+    name: kufu_29
+    pivot: {x: 38.5, y: 62}
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 122
+      width: 77
+      height: 124
+    sprite: {fileID: 21300058, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 31
+    name: kufu_30
+    pivot: {x: 51, y: 45.5}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 154
+      width: 102
+      height: 91
+    sprite: {fileID: 21300060, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 32
+    name: kufu_31
+    pivot: {x: 49.5, y: 45.5}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 154
+      width: 99
+      height: 91
+    sprite: {fileID: 21300062, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 33
+    name: kufu_32
+    pivot: {x: 49.5, y: 45.5}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 154
+      width: 99
+      height: 91
+    sprite: {fileID: 21300064, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 34
+    name: kufu_33
+    pivot: {x: 49.5, y: 45.5}
+    rect:
+      serializedVersion: 2
+      x: 381
+      y: 155
+      width: 99
+      height: 91
+    sprite: {fileID: 21300066, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 35
+    name: kufu_34
+    pivot: {x: 51.5, y: 47.5}
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 26
+      width: 103
+      height: 95
+    sprite: {fileID: 21300068, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 36
+    name: kufu_35
+    pivot: {x: 51, y: 52.5}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 16
+      width: 102
+      height: 105
+    sprite: {fileID: 21300070, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 37
+    name: kufu_36
+    pivot: {x: 49, y: 53.5}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 14
+      width: 98
+      height: 107
+    sprite: {fileID: 21300072, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 38
+    name: kufu_37
+    pivot: {x: 49, y: 60.5}
+    rect:
+      serializedVersion: 2
+      x: 304
+      y: 0
+      width: 98
+      height: 121
+    sprite: {fileID: 21300074, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}
+  - ID: 39
+    name: kufu_38
+    pivot: {x: 41.5, y: 59.5}
+    rect:
+      serializedVersion: 2
+      x: 402
+      y: 2
+      width: 83
+      height: 119
+    sprite: {fileID: 21300076, guid: d07a07434026f20408da7e2b83dfe8b6, type: 3}

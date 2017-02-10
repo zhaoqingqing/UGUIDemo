@@ -44,6 +44,31 @@ Unity脚本手册：https://docs.unity3d.com/ScriptReference/UI.Button.html
 
 ## UGUI插件库
 
+### Tween插件
+
 https://github.com/luzexi/Unity3DuGUI-Toolkit
 
 这个作者重写了和NGUI类似的Tween组件，给UGUI使用，UI_TweenColor，UI_TweenGroup，UI_TweenPosition，UI_TweenRotation，UI_TweenScale。
+
+当然如果是经常使用，还是推荐dotween
+
+### 其它
+
+Text文字间距：http://blog.csdn.net/qq_26999509/article/details/51902551
+
+Text彩虹字：http://blog.csdn.net/qq_26999509/article/details/51863098
+
+Text文字渐变色：http://www.xuanyusong.com/archives/3471
+
+Text 倒影效果： http://blog.csdn.net/qq_26999509/article/details/51884121
+
+文字下划线：思路：生成一个新的Text 文字为____
+
+
+
+基于BaseMeshEffect的更多扩展
+
+https://docs.unity3d.com/ScriptReference/UI.BaseMeshEffect.html
+
+更多的扩展：http://blog.csdn.net/u010019717/article/details/47393501
+

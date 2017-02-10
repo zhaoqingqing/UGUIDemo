@@ -1,0 +1,565 @@
+fileFormatVersion: 2
+guid: d07a07434026f20408da7e2b83dfe8b6
+timeCreated: 1486697718
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: kufu_0
+    21300002: kufu_1
+    21300004: kufu_2
+    21300006: kufu_3
+    21300008: kufu_4
+    21300010: kufu_5
+    21300012: kufu_6
+    21300014: kufu_7
+    21300016: kufu_8
+    21300018: kufu_9
+    21300020: kufu_10
+    21300022: kufu_11
+    21300024: kufu_12
+    21300026: kufu_13
+    21300028: kufu_14
+    21300030: kufu_15
+    21300032: kufu_16
+    21300034: kufu_17
+    21300036: kufu_18
+    21300038: kufu_19
+    21300040: kufu_20
+    21300042: kufu_21
+    21300044: kufu_22
+    21300046: kufu_23
+    21300048: kufu_24
+    21300050: kufu_25
+    21300052: kufu_26
+    21300054: kufu_27
+    21300056: kufu_28
+    21300058: kufu_29
+    21300060: kufu_30
+    21300062: kufu_31
+    21300064: kufu_32
+    21300066: kufu_33
+    21300068: kufu_34
+    21300070: kufu_35
+    21300072: kufu_36
+    21300074: kufu_37
+    21300076: kufu_38
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kufu_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 878
+        width: 102
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 890
+        width: 88
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 896
+        width: 83
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_3
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 910
+        width: 94
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_4
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 902
+        width: 94
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 762
+        width: 187
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_6
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 756
+        width: 92
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 760
+        width: 86
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_8
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 762
+        width: 78
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 634
+        width: 77
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_10
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 632
+        width: 102
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_11
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 634
+        width: 99
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_12
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 634
+        width: 99
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_13
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 632
+        width: 99
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 506
+        width: 103
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_15
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 502
+        width: 102
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_16
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 503
+        width: 98
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_17
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 509
+        width: 98
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_18
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 510
+        width: 83
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 384
+        width: 101
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_20
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 388
+        width: 88
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_21
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 386
+        width: 83
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_22
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 378
+        width: 95
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_23
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 372
+        width: 94
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 246
+        width: 93
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_25
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 254
+        width: 94
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_26
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 262
+        width: 92
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_27
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 262
+        width: 86
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_28
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 256
+        width: 77
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 122
+        width: 77
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_30
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 154
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_31
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 154
+        width: 99
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_32
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 154
+        width: 99
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_33
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 155
+        width: 99
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_34
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 26
+        width: 103
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_35
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 16
+        width: 102
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_36
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 14
+        width: 98
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_37
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 98
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: kufu_38
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 2
+        width: 83
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
