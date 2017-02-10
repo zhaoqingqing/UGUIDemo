@@ -20,7 +20,7 @@
 
 基于UGUI和Dotween写的一个快速弹出提示信息的消息窗，路径：Asset/QuickMsg/ 见如下：
 
-![https://github.com/zhaoqingqing/UGUIDemo/tree/master/Doc/quickmsg.gif](https://github.com/zhaoqingqing/UGUIDemo/tree/master/Doc/quickmsg.gif)
+![https://github.com/zhaoqingqing/UGUIDemo/blob/master/Doc/quickmsg.gif](https://github.com/zhaoqingqing/UGUIDemo/blob/master/Doc/quickmsg.gif)
 
 ## 更多资料
 
