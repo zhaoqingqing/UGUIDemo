@@ -34,15 +34,23 @@ Unity脚本手册：https://docs.unity3d.com/ScriptReference/UI.Button.html
 
 ## RoadMap
 
-事件系统
+事件系统：更倾向于类似NGUI的UIEventLister封装
 
-布局系统
+
+
+布局系统：
 
 
 
 
 
 ## UGUI插件库
+
+### 内置特效
+
+关于Position As UV1的使用，需要特定的shader（detail）和图片来起作用
+
+可以参考：http://www.manew.com/blog-77510-2929.html
 
 ### Tween插件
 

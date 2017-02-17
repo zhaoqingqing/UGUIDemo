@@ -577,6 +577,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1293138943}
   - 222: {fileID: 1293138944}
+  - 223: {fileID: 1293138946}
   - 114: {fileID: 1293138945}
   m_Layer: 5
   m_Name: Panel
@@ -623,6 +624,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BtnTest: {fileID: 1884122240}
   MsgIndex: 0
+--- !u!223 &1293138946
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1293138942}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1564897683
 Prefab:
   m_ObjectHideFlags: 0
