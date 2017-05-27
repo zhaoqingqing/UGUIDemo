@@ -16,8 +16,8 @@ public class XUIMidMsgAnimator : MonoBehaviour
 
     public void StartAnimate(string msgStr)
     {
-        msgLabel = SDKUtils.GetChildComponent<Text>("Label", transform);
-        msgBackground = SDKUtils.GetChildComponent<Image>("Background", transform);
+        msgLabel = UnityHelper.GetChildComponent<Text>("Label", transform);
+        msgBackground = UnityHelper.GetChildComponent<Image>("Background", transform);
         Debug.Assert(msgLabel);
         Debug.Assert(msgBackground);
 

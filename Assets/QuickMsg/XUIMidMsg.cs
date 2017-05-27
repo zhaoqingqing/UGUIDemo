@@ -61,7 +61,7 @@ public class XUIMidMsg : MonoBehaviour
         {
             m_MsgTempllatePool = new Stack<XUIMidMsgAnimator>();
 
-            MsgTemplate = SDKUtils.GetChildComponent<Transform>(transform, "MsgTemplate");
+            MsgTemplate = UnityHelper.GetChildComponent<Transform>(transform, "MsgTemplate");
             if (MsgTemplate)
             {
                 MsgTemplate.gameObject.SetActive(false);
@@ -122,12 +122,12 @@ public class XUIMidMsg : MonoBehaviour
         {
             GameObject newGameObj = GameObject.Instantiate(MsgTemplate.gameObject) as GameObject;
             msgInstance = newGameObj.AddComponent<XUIMidMsgAnimator>();
-            msgInstance.transform.parent = this.transform;
+            msgInstance.transform.SetParent(this.transform);
             msgInstance.UICtrler = this;
         }
 
 
-        SDKUtils.ResetTransform(msgInstance.transform);
+        UnityHelper.ResetTransform(msgInstance.transform);
         msgInstance.gameObject.SetActive(true);
 
         return msgInstance;
