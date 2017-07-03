@@ -114,6 +114,11 @@ public static class TransformEx
         pTran.localScale = new Vector3(x, y, z);
     }
 
+    public static void SetLocalScale(this Transform pTran, Vector3 vet)
+    {
+        pTran.localScale = vet;
+    }
+
     public static void ZomeLocalScale(this Transform pTran, float x, float y, float z)
     {
         pTran.localScale = new Vector3(pTran.localScale.x*x, pTran.localScale.y*y, pTran.localScale.z*z);

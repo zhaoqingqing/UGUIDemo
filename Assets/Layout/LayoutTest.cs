@@ -64,7 +64,7 @@ public class LayoutTest : MonoBehaviour
             var clone = GameObject.Instantiate(Prefab) as GameObject;
             clone.transform.SetParent(transform);
 
-            clone.transform.SetLocalPositionZ(0);
+            clone.transform.SetLocalPosZ_(0);
             clone.transform.SetLocalScale(Vector3.one);
         }
         //VLayoutGroup.SetLayoutVertical();
