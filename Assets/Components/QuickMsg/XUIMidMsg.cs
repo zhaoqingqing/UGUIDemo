@@ -18,7 +18,7 @@ public class XUIMidMsg : MonoBehaviour
     private Stack<XUIMidMsgAnimator> m_MsgTempllatePool;  // 内存池
     public List<XUIMidMsgAnimator> m_WaitingMsgList = new List<XUIMidMsgAnimator>();  // waiting List... wait for 1-5 seconds
 
-    public Transform MsgTemplate;
+    public GameObject MsgTemplate;
 
     private bool IsInit = false;
 
@@ -32,8 +32,22 @@ public class XUIMidMsg : MonoBehaviour
                 instance = GameObject.FindObjectOfType(typeof(XUIMidMsg)) as XUIMidMsg;
                 if (instance == null)
                 {
+                    //初始化
                     GameObject obj = new GameObject("XUIMidMsg");
+                    var uiRoot = GameObject.FindObjectOfType<Canvas>();
+                    if (uiRoot)
+                    {
+                        obj.AddComponent<Canvas>();
+                        obj.transform.SetParent(uiRoot.transform);
+                        obj.transform.ResetLocal();
+                    }
+                    else
+                    {
+                        Debug.LogError("当前场景找不到任何Canvas");
+                    }
                     instance = obj.AddComponent<XUIMidMsg>();
+                    instance.MsgTemplate = Resources.Load("MsgTemplate") as GameObject;
+                    instance.OnInit();
                 }
             }
             return instance;
@@ -60,16 +74,13 @@ public class XUIMidMsg : MonoBehaviour
         if (!IsInit)
         {
             m_MsgTempllatePool = new Stack<XUIMidMsgAnimator>();
-
-            MsgTemplate = UnityHelper.GetChildComponent<Transform>(transform, "MsgTemplate");
-            if (MsgTemplate)
+            var msgTemplate = UnityHelper.GetChildComponent<Transform>(transform, "MsgTemplate", false);
+            if (msgTemplate)
             {
+                MsgTemplate = msgTemplate.gameObject;
                 MsgTemplate.gameObject.SetActive(false);
             }
-            else
-            {
-                Debug.LogError("MsgTemplate 在子节点找不到，请检查！");
-            }
+
             IsInit = true;
         }
     }
@@ -120,7 +131,7 @@ public class XUIMidMsg : MonoBehaviour
 
         if (msgInstance == null)
         {
-            GameObject newGameObj = GameObject.Instantiate(MsgTemplate.gameObject) as GameObject;
+            GameObject newGameObj = GameObject.Instantiate(MsgTemplate) as GameObject;
             msgInstance = newGameObj.AddComponent<XUIMidMsgAnimator>();
             msgInstance.transform.SetParent(this.transform);
             msgInstance.UICtrler = this;
