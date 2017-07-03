@@ -60,6 +60,21 @@ https://github.com/luzexi/Unity3DuGUI-Toolkit
 
 当然如果是经常使用，还是推荐dotween
 
+### 高性能无限滑动
+
+地址：https://github.com/qiankanglai/LoopScrollRect
+
+中文说明：http://qiankanglai.me/2015/08/15/LoopScrollRect/
+
+
+### 超链接
+
+地址：https://github.com/setchi/uGUI-Hypertext
+
+
+### 图文混排
+
+
 ### 其它
 
 Text文字间距：http://blog.csdn.net/qq_26999509/article/details/51902551
