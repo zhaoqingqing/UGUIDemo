@@ -24,7 +24,7 @@ public class ScrollToBottomTest : MonoBehaviour
     private void OnGUI()
     {
         GUILayout.BeginArea(new Rect(80, 20, 200, 200));
-        GUILayout.Label(siderValue.ToString());
+        GUILayout.Label("滑动修改滚动位置:"+siderValue.ToString());
         siderValue = GUILayout.HorizontalSlider(siderValue, 0, 1, GUILayout.MinWidth(200), GUILayout.MinHeight(20));
 
         if (ScrollRect && enableDebug && lastSiderValue != siderValue)
