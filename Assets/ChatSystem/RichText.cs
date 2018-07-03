@@ -8,17 +8,19 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 #if UNITY_EDITOR
-using  UnityEditor;
+using UnityEditor;
 #endif
 /// <summary>
 /// 文本控件，支持超链接、图片
 /// </summary>
+[ExecuteInEditMode]
 [AddComponentMenu("UI/RichText", 10)]
 public class RichText : Text, IPointerClickHandler
 {
+    public Canvas canvas;
     [SerializeField]
     public UIChatSprites spriteFont;
-//    public bool imgRayCast = true;
+    //    public bool imgRayCast = true;
 
     /// <summary>
     /// 解析完最终的文本
@@ -47,7 +49,7 @@ public class RichText : Text, IPointerClickHandler
     protected static readonly StringBuilder s_TextBuilder = new StringBuilder();
 
     [Serializable]
-    public class HrefClickEvent : UnityEvent<string,string> { }
+    public class HrefClickEvent : UnityEvent<string, string> { }
 
     [SerializeField]
     private HrefClickEvent m_OnHrefClick = new HrefClickEvent();
@@ -71,6 +73,41 @@ public class RichText : Text, IPointerClickHandler
     /// </summary>
     private static readonly Regex s_HrefRegex =
         new Regex(@"<link=([^>\n\s]+)>(.*?)(</link>)", RegexOptions.Singleline);
+
+    /// <summary>
+    /// 获取RichText的实际显示区域的宽度和高度
+    /// </summary>
+    [ContextMenu("打印实际宽高")]
+    public Vector2 GetViewSize()
+    {
+        var scale = Vector3.one;
+        if (canvas == null)
+        {
+            canvas = transform.GetComponentInParent(typeof(Canvas)) as Canvas;
+        }
+        if (canvas)
+        {
+            scale = canvas.transform.localScale;
+        }
+
+        var strContent = this.text;
+        var strOutput = GetOutputText(strContent);
+
+        TextGenerator tg = new TextGenerator();
+        var size = new Vector2(this.rectTransform.rect.size.x, 0.0f);
+        TextGenerationSettings settingsHeight = this.GetGenerationSettings(size); //txt是用来显示Text组件 
+        float height = tg.GetPreferredHeight(strOutput, settingsHeight);
+        var size2 = new Vector2(0, height);
+        TextGenerationSettings settingsWidth = this.GetGenerationSettings(size2); //txt是用来显示Text组件 
+        float width = tg.GetPreferredWidth(strOutput, settingsWidth);
+        height = Mathf.Round(height / scale.y);
+        width = Mathf.Round(width / scale.x);
+        //        Debug.LogFormat("width={0},height={1}, text={2}", width, height, strContent);
+        //        Debug.LogFormat("{0}", strOutput);
+
+        return new Vector2(width, height);
+    }
+
     /// <summary>
     /// 加载精灵图片方法
     /// </summary>
@@ -85,7 +122,7 @@ public class RichText : Text, IPointerClickHandler
 #if UNITY_EDITOR
         if (UnityEditor.PrefabUtility.GetPrefabType(this) == UnityEditor.PrefabType.Prefab)
         {
-//            return;
+            //            return;
         }
 #endif
         m_OutputText = GetOutputText(text);
@@ -211,21 +248,21 @@ public class RichText : Text, IPointerClickHandler
         foreach (Match match in s_HrefRegex.Matches(outputText))
         {
             s_TextBuilder.Append(outputText.Substring(indexText, match.Index - indexText));
-//            s_TextBuilder.Append("<color=blue>");  // 超链接颜色
+            //            s_TextBuilder.Append("<color=blue>");  // 超链接颜色
             s_TextBuilder.Append("[");  // 超链接颜色
             var group = match.Groups[2];
             var hrefInfo = new HrefInfo
             {
                 startIndex = s_TextBuilder.Length * 4, // 超链接里的文本起始顶点索引
                 endIndex = (s_TextBuilder.Length + match.Groups[2].Length - 1) * 4 + 3,
-                
+
                 name = group.Value
             };
             hrefInfo.id = match.Groups[1].Value;
 
             m_HrefInfos.Add(hrefInfo);
             s_TextBuilder.Append(match.Groups[2].Value);
-//            s_TextBuilder.Append("</color>");
+            //            s_TextBuilder.Append("</color>");
             s_TextBuilder.Append("]");
             indexText = match.Index + match.Length;
         }
@@ -248,7 +285,7 @@ public class RichText : Text, IPointerClickHandler
             {
                 if (boxes[i].Contains(lp))
                 {
-                    m_OnHrefClick.Invoke(hrefInfo.id,hrefInfo.name);
+                    m_OnHrefClick.Invoke(hrefInfo.id, hrefInfo.name);
                     return;
                 }
             }
@@ -280,7 +317,12 @@ public class RichTextEditor : Editor
         obj = target as RichText;
         base.OnInspectorGUI();
         EditorGUILayout.ObjectField("图集：", obj.spriteFont, typeof(UnityEngine.Object), true, GUILayout.ExpandWidth(true));
-       
+        if (GUILayout.Button("打印宽高"))
+        {
+            var size = obj.GetViewSize();
+            var scale = obj.canvas ? obj.canvas.transform.localScale : Vector3.one;
+            Debug.LogFormat("size={0},scale = {1}",size, scale);
+        }
     }
 }
 #endif
