@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using System.Runtime.InteropServices;
 //using System.Diagnostics;
 //using DG.Tweening;
-using SimpleJson;
 using UnityEngine;
 
 
@@ -46,11 +45,13 @@ public partial class UnityHelper
     {
         particleSystem.startLifetime *= scale;
         particleSystem.startSize *= scale;
-
-        if (particleSystem.GetComponent<ParticleEmitter>() != null)
+        ParticleEmitter particleEmitter =  particleSystem.GetComponent<ParticleEmitter>();
+        if (particleEmitter != null)
         {
-            particleSystem.GetComponent<ParticleEmitter>().minSize *= scale;
-            particleSystem.GetComponent<ParticleEmitter>().maxSize *= scale;
+#if !UNITY_2018_1_OR_NEWER
+            particleEmitter.minSize *= scale;
+            particleEmitter.maxSize *= scale;
+#endif
         }
 
         if (particleSystem.GetComponent<ConstantForce>() != null)
@@ -368,7 +369,7 @@ public partial class UnityHelper
     {
         if (findTrans == null)
             return default(T);
-        Transform trans = findTrans.FindChild(uri);
+        Transform trans = findTrans.Find(uri);
         if (trans == null)
         {
             if (isLog)

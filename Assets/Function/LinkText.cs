@@ -62,7 +62,7 @@ public class LinkText : MonoBehaviour
         //#endif
         //            }
         //        }
-        var lastSpawn = transform.FindChild(childName);
+        var lastSpawn = transform.Find(childName);
         if (lastSpawn)
         {
 #if UNITY_EDITOR
