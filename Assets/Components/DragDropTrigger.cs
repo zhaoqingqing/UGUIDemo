@@ -5,9 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 //拖动组件
-//复制一份图标，用于拖动，当取消拖动时Destory复制出来的对象，不修改原始gameobject。
 //https://www.cnblogs.com/zhaoqingqing/p/3974275.html
-public class DragDropTrigger : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
+public class DragDropTrigger : MonoBehaviour, IDragHandler, IEndDragHandler,IPointerDownHandler, IPointerUpHandler
 {
     public Vector3 onDownScale = new Vector3(0.7f, 0.7f, 0.7f);
     //作为唯一标识：用于事件回调
@@ -44,7 +43,7 @@ public class DragDropTrigger : MonoBehaviour, IDragHandler, IPointerDownHandler,
             OnPointerDown(eventData);
         }
     }
-
+    
     public void OnPointerDown(PointerEventData eventData)
     {
         if (cloneObj == null)
@@ -62,13 +61,18 @@ public class DragDropTrigger : MonoBehaviour, IDragHandler, IPointerDownHandler,
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        OnEndOpt();
+    }
+
+    public void OnEndOpt()
+    {
         cloneObj.transform.localScale = new Vector3(1f, 1f, 1f);
         //限定distance，否则在图标的正上方松手后也会检测到
-        RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition, -Vector2.up,2);
+        RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition, -Vector2.up, 2);
 
         if (hit.collider != null)
         {
-//            Debug.LogFormat("hit ,{0}", hit.collider.gameObject.name);
+            //            Debug.LogFormat("hit ,{0}", hit.collider.gameObject.name);
             //如果射线检测到的gameobject为grid，则放在grid节点下
             if (hit.collider.gameObject.name == targetPanel.name)
             {
@@ -95,5 +99,10 @@ public class DragDropTrigger : MonoBehaviour, IDragHandler, IPointerDownHandler,
     {
         Destroy(cloneObj);
         transform.localScale = Vector3.one;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        OnEndOpt();
     }
 }
