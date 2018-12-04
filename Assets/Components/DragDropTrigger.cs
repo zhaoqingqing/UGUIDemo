@@ -16,7 +16,8 @@ public class DragDropTrigger : MonoBehaviour, IDragHandler, IEndDragHandler,IPoi
     //放入事件
     public Action<string> OnPutIn = null;
     public GameObject cloneObj;
-
+    //执行操作结束
+    private bool checkEnd = true;
     public static DragDropTrigger Create(GameObject obj, Transform _target,  string _key)
     {
         if (obj == null)
@@ -35,7 +36,7 @@ public class DragDropTrigger : MonoBehaviour, IDragHandler, IEndDragHandler,IPoi
         if (cloneObj != null)
         {
             transform.localScale = Vector3.zero;
-            cloneObj.GetComponent<RectTransform>().pivot.Set(0, 0);
+//            cloneObj.GetComponent<RectTransform>().pivot.Set(0, 0);
             cloneObj.transform.position = Input.mousePosition;
         }
         else
@@ -57,15 +58,29 @@ public class DragDropTrigger : MonoBehaviour, IDragHandler, IEndDragHandler,IPoi
         {
             Destroy(cloneObj);
         }
+        checkEnd = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        OnEndOpt();
+        //OnPointerUp和OnEndDrag，只处理一个
+        if (checkEnd)
+        {
+            OnEndOpt();
+        }
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (checkEnd)
+        {
+            OnEndOpt();
+        }
     }
 
     public void OnEndOpt()
     {
+        checkEnd = false;
         cloneObj.transform.localScale = new Vector3(1f, 1f, 1f);
         //限定distance，否则在图标的正上方松手后也会检测到
         RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition, -Vector2.up, 2);
@@ -101,8 +116,5 @@ public class DragDropTrigger : MonoBehaviour, IDragHandler, IEndDragHandler,IPoi
         transform.localScale = Vector3.one;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        OnEndOpt();
-    }
+
 }
