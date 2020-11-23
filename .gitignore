@@ -31,3 +31,5 @@ sysinfo.txt
 *.unitypackage
 UniGit
 UniGit.meta
+.idea
+.idea.meta
