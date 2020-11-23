@@ -45,15 +45,16 @@ public partial class UnityHelper
     {
         particleSystem.startLifetime *= scale;
         particleSystem.startSize *= scale;
+#if UNITY_5
         ParticleEmitter particleEmitter =  particleSystem.GetComponent<ParticleEmitter>();
         if (particleEmitter != null)
         {
-#if !UNITY_2018_1_OR_NEWER
+
             particleEmitter.minSize *= scale;
             particleEmitter.maxSize *= scale;
-#endif
-        }
 
+        }
+#endif
         if (particleSystem.GetComponent<ConstantForce>() != null)
         {
             particleSystem.GetComponent<ConstantForce>().force *= scale;

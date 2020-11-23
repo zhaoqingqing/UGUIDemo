@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_5
 public class AlphaNumericSort : BaseHierarchySort
 {
 	public override int Compare(GameObject lhs, GameObject rhs)
@@ -12,3 +13,4 @@ public class AlphaNumericSort : BaseHierarchySort
 		return EditorUtility.NaturalCompare(lhs.name, rhs.name);
 	}
 }
+#endif
