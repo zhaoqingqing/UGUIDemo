@@ -33,3 +33,7 @@ UniGit
 UniGit.meta
 .idea
 .idea.meta
+win
+win/*
+logs
+logs/*

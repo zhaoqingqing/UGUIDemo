@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Function/TestLogStackTrace.unity
+    guid: 8626e0e781485804290b72dee24a4bdd
   m_configObjects: {}
