@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
 
+#if UNITY_EDITOR
+using UnityEditor;
 public static class UGUICreateSpriteAsset
 {
     [MenuItem("Assets/Create/UGUI Sprite Asset", false, 10)]
@@ -60,3 +61,4 @@ public static class UGUICreateSpriteAsset
     }
 
 }
+#endif
